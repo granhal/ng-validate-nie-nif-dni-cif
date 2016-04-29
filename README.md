@@ -18,6 +18,11 @@ Module for validate NIE / NIF / DNI and CIF for spanish validations forms
 var yourApp = angular.module('yourApp', ['ngValidateNIEs']);
 ```
 
+###In your view insert (is a simple example):
+```html
+<input type="text" data-ng-model="data.nif" placeholder="DNI/NIF/NIE" validate-ni-es required>
+```
+
 ###In your view insert (is a example, this example using bootstrap and font-awesome lib's, and others filters):
 ```html
 <form name="signupForm" id="signup-form" data-ng-submit="$close(); processData(data, 3); ">
@@ -25,7 +30,7 @@ var yourApp = angular.module('yourApp', ['ngValidateNIEs']);
         <div class="form-group text-center-xs has-feedback">
             <label for="nif-input">DNI/NIF/NIE</label>
             <div class="input-group-info">
-                <input type="text" data-ng-model="data.nif" class="form-control text-center" id="nif-input" name="nifInput" placeholder="DNI/NIF/NIE" **validate-ni-es** required>
+                <input type="text" data-ng-model="data.nif" class="form-control text-center" id="nif-input" name="nifInput" placeholder="DNI/NIF/NIE" validate-ni-es required>
                 <span class="input-group-btn">
                     <span class="btn btn-default" type="button" data-share-focus tabindex="-1">
                         <!-- This span emulates a button that properly work with shareFocus-->
